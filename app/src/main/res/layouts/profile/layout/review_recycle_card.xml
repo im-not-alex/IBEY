@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemListCard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent.Rounded"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="12dp"
+    android:layout_marginHorizontal="20dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/stroke_color"
+    android:backgroundTint="@color/backgroundReviewCard"
+    app:cardElevation="30dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:id="@+id/author_pic_card"
+            app:shapeAppearance="@style/ShapeAppearance.rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:backgroundTint="@color/backgroundReviewCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/author_pic"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="@string/author_pic_desc" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/authorNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginStart="8dp"
+            android:text="@string/itemSellerNickname"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="@dimen/miniFieldsSize"
+            android:textStyle="italic"
+
+            app:layout_constraintStart_toEndOf="@+id/author_pic_card"
+            app:layout_constraintTop_toTopOf="@+id/author_pic_card"
+            app:layout_constraintBottom_toBottomOf="@+id/author_pic_card"
+            />
+
+        <RatingBar
+            android:id="@+id/rating_bar_review"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:layout_marginTop="3dp"
+            android:progressTint="@color/secondaryColor"
+            android:scaleX="0.65"
+            android:scaleY="0.65"
+            android:stepSize="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author_pic_card" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:minLines="1"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:text="@string/loremlol"
+            android:textAlignment="center"
+            android:textColor="@color/primaryColor"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rating_bar_review" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

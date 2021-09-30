@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/app_bar_main"
+    tools:context=".MainActivity">
+
+        <include layout="@layout/toolbar_show_pic"
+            android:id="@+id/toolbar_wrapper" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:context=".ui.profile.editProfile.EditProfileFragment">
+
+                <include
+                    android:id="@+id/linearLayout"
+                    layout="@layout/profile_edit_fields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    android:paddingTop="10dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="20dp"
+                    />
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_takepic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:backgroundTint="@color/secondaryColor"
+            app:layout_anchor="@id/nestedScrollView"
+            app:layout_anchorGravity="right"
+            app:rippleColor="@color/colorAccent"
+            app:srcCompat="@drawable/camera_icon"
+            app:elevation="20dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

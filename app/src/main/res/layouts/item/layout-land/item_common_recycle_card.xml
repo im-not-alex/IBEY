@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="10dp"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/itemListCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:strokeWidth="1dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/backgroundProfilePic"
+        app:strokeColor="@color/stroke_color"
+        app:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_margin="9dp"
+            android:layout_height="@dimen/itemCommonCardHeight">
+
+            <ImageView
+                android:id="@+id/itemImageCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="5dp"
+                android:background="@color/primaryDarkColor"
+                android:contentDescription="@string/itemImage"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/empty_picture" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="6dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/itemImageCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/itemTitleCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical|start"
+                    android:singleLine="true"
+                    android:text="@string/itemTitle"
+                    android:textAppearance="@style/myTitleCommonHor"
+                    app:layout_constraintBottom_toTopOf="@+id/itemLocationCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/itemSellerNickname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/itemSellerNickname"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textStyle="italic"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/itemCategoryCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/itemCategory"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/itemLocationCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/itemSellerNickname" />
+
+                <TextView
+                    android:id="@+id/itemLocationCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical|start"
+                    android:singleLine="true"
+                    android:text="@string/itemLocation"
+                    android:textAppearance="@style/mysubbinoElement"
+                    app:layout_constraintBottom_toTopOf="@+id/itemExpireDateCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/itemTitleCard" />
+
+                <TextView
+                    android:id="@+id/itemExpireDateCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical|start"
+                    android:singleLine="true"
+                    android:textColor="@color/red_sold"
+                    android:text="@string/itemExpireDate"
+                    android:textAppearance="@style/mysubElement"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/itemLocationCard" />
+
+                <TextView
+                    android:id="@+id/itemPriceCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical|end"
+                    android:singleLine="true"
+                    android:text="@string/itemPrice"
+                    android:textAppearance="@style/priceCommon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/itemLocationCard" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="124dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

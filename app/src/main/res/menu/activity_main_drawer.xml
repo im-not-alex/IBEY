@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/group1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/onSaleListFragment"
+            android:icon="@drawable/list_icon"
+            android:title="@string/title_fragment_on_sale_list_item" />
+        <item
+            android:id="@+id/OwnProfileFragment"
+            android:icon="@drawable/account_icon"
+            android:title="@string/title_fragment_show_profile" />
+        <item
+            android:id="@+id/itemListFragment"
+            android:icon="@drawable/ic_storefront"
+            android:title="@string/title_fragment_list_item" />
+        <item
+            android:id="@+id/itemsOfInterestListFragment"
+            android:icon="@drawable/love_icon"
+            android:title="@string/title_fragment_request_item" />
+        <item
+            android:id="@+id/boughtItemsListFragment"
+            android:icon="@drawable/ic_archive"
+            android:title="@string/title_fragment_bought_item" />
+    </group>
+
+    <group android:id="@+id/group2" android:checkableBehavior="none">
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/title_logout" />
+    </group>
+</menu>

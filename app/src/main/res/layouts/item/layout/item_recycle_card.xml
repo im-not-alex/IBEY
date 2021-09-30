@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="10dp"
+    android:orientation="vertical">
+
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/itemListCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeWidth="0dp"
+    app:cardCornerRadius="0dp"
+    app:cardBackgroundColor="@color/backgroundProfilePic"
+    app:cardElevation="0dp"
+    android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemCardHeight">
+
+        <ImageView
+            android:id="@+id/itemImageCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/primaryDarkColor"
+            android:contentDescription="@string/itemImage"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintBottom_toBottomOf="@id/wrapperText"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/wrapperText"
+            app:srcCompat="@drawable/empty_picture" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/wrapperText"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/idEditItem"
+                    app:layout_constraintStart_toEndOf="@+id/guideline3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/itemTitleCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="@string/itemTitle"
+                            android:gravity="center_vertical|start"
+                            android:textAppearance="@style/myTitle"
+                            app:layout_constraintBottom_toTopOf="@id/itemLocationCard"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+                        <TextView
+                            android:id="@+id/itemLocationCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/itemLocation"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            app:layout_constraintBottom_toTopOf="@id/itemExpireDateCard"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemTitleCard" />
+
+                        <TextView
+                            android:id="@+id/itemExpireDateCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/itemExpireDate"
+                            android:textColor="@color/red_sold"
+                            android:textAppearance="@style/mysubElement"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemLocationCard" />
+
+                        <TextView
+                            android:id="@+id/itemPriceCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical|end"
+                            android:singleLine="true"
+                            android:text="@string/itemPrice"
+                            android:textAppearance="@style/mysubElementBolded"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toStartOf="@+id/guideline"
+                            app:layout_constraintTop_toTopOf="@+id/itemExpireDateCard"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageButton
+                    android:id="@+id/idEditItem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/shape_button_sold_selector"
+                    android:contentDescription="@string/edit_or_sold_descr"
+                    android:src="@drawable/ic_edit"
+                    android:tint="@color/secondaryDarkColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.295" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.87" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/dividerCard"
+            style="@style/DividerCard"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/itemCategoryCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/itemCategory"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:backgroundTint="@color/primaryColor"
+    app:liftOnScroll="true"
+    android:fitsSystemWindows="true"
+    >
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:expandedTitleGravity="bottom"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:collapsedTitleGravity="top"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@color/gradientGray"
+        app:scrimVisibleHeightTrigger="150dp"
+        app:scrimAnimationDuration="800"
+        app:expandedTitleTextAppearance="@style/ExpandedAppBar"
+        app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+        app:maxLines="2"
+        >
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/empty_picture"
+            app:layout_collapseMode="parallax"
+            android:fitsSystemWindows="true"
+            app:layout_collapseParallaxMultiplier="0.5"
+            android:contentDescription="@string/profile_icon_desc" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"
+            android:src="@drawable/picture_shape"
+            app:layout_collapseMode="parallax"
+            app:layout_collapseParallaxMultiplier="0.5"
+            android:contentDescription="@string/shadow_desc"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:titleMarginBottom="20dp"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/PopupMenu"/>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>

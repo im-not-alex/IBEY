@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_show_interests"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:elevation="20dp"
+    android:background="@color/primaryColor">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/item_show_interests_button"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/secondaryLightColor"
+        app:backgroundTint="@color/secondaryLightColor"
+        android:foreground="?attr/selectableItemBackground"
+        android:backgroundTintMode="src_in"
+        android:text="@string/interest"
+        android:gravity="fill"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:icon="@drawable/ic_keyboard_arrow_right"
+        app:iconPadding="0dp"
+        app:iconTint="#000000" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/interestsRecyclerView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/itemListBackground"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/id_sell_to_other"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/primaryDarkColor"
+        android:backgroundTintMode="src_in"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="fill"
+        android:text="@string/sellToOtherString"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:visibility="gone"
+        app:backgroundTint="@color/primaryColor"
+        app:icon="@drawable/ic_person"
+        app:iconPadding="0dp"
+        app:iconTint="#000000" />
+
+</LinearLayout>

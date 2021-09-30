@@ -1,0 +1,242 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- <item name="android:fontFamily">@font/lato_light</item> -->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimations</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="TextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextAppearance">@style/TextLabel</item> <!-- hint size -->
+        <item name="android:textColorHint">@color/primaryDarkColor</item>
+        <item name="android:layout_marginLeft">@dimen/textInputStyleMargin</item>
+        <item name="android:layout_marginRight">@dimen/textInputStyleMargin</item>
+        <item name="android:layout_marginTop">@dimen/textInputStyleMargin</item>
+        <item name="boxBackgroundColor">#00000000</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="startIconTint">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="TextInputCommentsStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextAppearance">@style/TextLabel</item> <!-- hint size -->
+        <item name="android:textColorHint">@color/primaryDarkColorObfuscated</item>
+        <item name="android:layout_marginLeft">@dimen/textInputStyleMargin</item>
+        <item name="android:layout_marginRight">@dimen/textInputStyleMargin</item>
+        <item name="android:layout_marginTop">@dimen/textInputStyleMargin</item>
+        <item name="boxBackgroundColor">#00000000</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+
+    <style name="ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="hintTextAppearance">@style/TextLabel</item> <!-- hint size -->
+        <item name="android:textColorHint">@color/primaryDarkColor</item>
+        <item name="android:background">@color/backgroundContentStronger</item>
+        <item name="android:layout_marginLeft">@dimen/textInputStyleMargin</item>
+        <item name="android:layout_marginRight">@dimen/textInputStyleMargin</item>
+        <item name="android:layout_marginTop">@dimen/textInputStyleMargin</item>
+    </style>
+
+    <style name="ExposedDropdownMenuWhite" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="hintTextAppearance">@style/TextLabel2</item> <!-- hint size -->
+        <item name="android:textColorHint">@color/primaryDarkColor</item>
+        <item name="android:layout_marginTop">@dimen/textInputStyleMargin</item>
+        <item name="boxStrokeColor">@color/transparent</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:strokeWidth">0</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="colorControlActivated">@color/transparent</item>
+        <item name="colorControlHighlight">@color/transparent</item>
+        <item name="colorControlNormal">@color/transparent</item>
+
+
+    </style>
+
+    <style name="Headline6NoBold" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="myTitle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">27sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="mysubElementBolded" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="mysubElementBoldedHor" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="mysubElement" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="mysubbinoElement" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="myTitleCommon" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">27sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="myTitleCommonHor" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="priceCommon" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+    <style name="ShowTextInputStyle" parent="TextInputStyle">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="startIconTint">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="TextLabel2" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/descrFieldsSize</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:textSize">@dimen/fieldsSize</item>
+        <item name="android:ems">10</item>
+        <item name="android:backgroundTint">@color/backgroundContentStronger</item>
+        <item name="startIconTint">@color/primaryDarkColor</item>
+
+    </style>
+
+    <style name="TextInputPopupEditTextStyle">
+        <item name="android:textSize">@dimen/miniFieldsSize</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <style name="DisableTextInputEditTextStyle" parent="TextInputEditTextStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:inputType">textNoSuggestions</item>
+
+    </style>
+
+    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@color/colorCMBackground</item>
+        <item name="android:popupElevation">@dimen/pic_cm_elev</item>
+        <item name="android:textColor">@color/textContextMenu</item>
+    </style>
+
+    <style name="addItemButton" parent="">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">56dp</item>
+        <item name="android:layout_marginEnd">56dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+
+    <style name="DividerCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#939393</item>
+    </style>
+
+
+
+    <style name="LoadingDialog">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:windowBackground">@color/loadingPopupTransparency</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="ShapeAppearance.MyApp.MediumComponent.Cut" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+    </style>
+
+    <style name="ShapeAppearance.MyApp.MediumComponent.Rounded" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeBottomRight">40dp</item>
+    </style>
+
+    <style name="wrapperRounded" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+    </style>
+
+    <style name="NavRoundRight" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopRight">40dp</item>
+        <item name="cornerSizeBottomRight">40dp</item>
+    </style>
+
+    <style name="ShapeAppearance.rounded" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">200dp</item>
+    </style>
+
+    <style name="SwitchCompatTheme" >
+        <item name="colorControlActivated">@color/primaryColor</item>
+    </style>
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="logoFont" parent ="TextAppearance.AppCompat.Display1">
+        <item name="fontFamily">amethyst</item>
+    </style>
+
+    <style name="ActivityAnimations" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:currentState="@id/set1_base"
+    app:layoutDescription="@xml/scene_filter"
+    app:motionDebug="NO_DEBUG"
+    app:showPaths="true"
+    tools:parentTag="androidx.constraintlayout.motion.widget.MotionLayout">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <View
+        android:id="@+id/filter_sheet_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <it.polito.mad.group33.ibey.utils.CircleCardView
+        android:id="@+id/fab"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        app:cardBackgroundColor="@color/secondaryColor"
+        app:cardCornerRadius="@dimen/fab_radius"
+        app:cardElevation="@dimen/fab_elevation" />
+
+    <ImageView
+        android:id="@+id/filter_icon"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:elevation="34dp"
+        android:outlineProvider="none"
+        android:scaleType="centerInside"
+        android:tint="@color/filter_icon_color"
+        app:layout_constraintBottom_toBottomOf="@id/fab"
+        app:layout_constraintEnd_toEndOf="@id/fab"
+        app:layout_constraintStart_toStartOf="@id/fab"
+        app:srcCompat="@drawable/ic_filter" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filter_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/secondaryColor"
+        android:elevation="33dp"
+        android:paddingHorizontal="40dp"
+        android:paddingBottom="@dimen/bottom_bar_height"
+        android:translationY="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/filter_sheet_placeholder"
+        app:layout_constraintEnd_toEndOf="@id/filter_sheet_placeholder"
+        app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder"
+        app:layout_constraintTop_toTopOf="@id/filter_sheet_placeholder">
+
+        <LinearLayout
+            android:id="@+id/filterPriceLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintBottom_toTopOf="@id/filter_popup_parent_dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/fields_shape"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/filterPopupPriceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_range_price"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/filterPopupPriceDisplay"
+                android:layout_marginHorizontal="@dimen/locationMapViewLayoutMargin"
+                android:layout_marginVertical="4dp"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/Headline6NoBold"/>
+
+            <TextView
+                android:id="@+id/filterPopupPriceDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/filterPopupPriceText"
+                app:layout_constraintBottom_toTopOf="@+id/filter_popup_id_item_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="@dimen/locationMapViewLayoutMargin"
+                android:layout_marginVertical="4dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/filter_popup_id_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/textInputStyleMargin"
+                android:layout_marginVertical="4dp"
+                android:layout_weight="1"
+                android:stepSize="0.01"
+                android:valueFrom="0"
+                android:valueTo="1000.0"
+                app:layout_constraintTop_toBottomOf="@+id/filterPopupPriceDisplay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/filter_popup_parent_dropdown"
+                app:values="@array/filterPopupPriceRangeValue" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filter_popup_parent_dropdown"
+            style="@style/ExposedDropdownMenuWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_category"
+            app:errorEnabled="true"
+            android:background="@drawable/fields_shape"
+            app:layout_constraintTop_toBottomOf="@+id/filterPriceLinearLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <it.polito.mad.group33.ibey.InstantAutoComplete
+                android:id="@+id/filter_popup_filled_exposed_dropdown"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="6dp"
+                android:background="@color/backgroundContentStronger"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:textSize="@dimen/fieldsSize"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_bar_card_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_bar_height"
+        android:outlineProvider="none"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/close_icon"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:elevation="34dp"
+        android:outlineProvider="none"
+        android:scaleType="centerInside"
+        android:tint="#FFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_bar_card_view"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar_card_view"
+        app:srcCompat="@drawable/cross_cancel" />
+</merge>

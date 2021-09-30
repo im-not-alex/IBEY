@@ -1,0 +1,100 @@
+{
+  "Items": {
+    "It1": {
+      "Category": "Animals",
+      "Description": "Quella della Milka",
+      "ExpiryDate": "15/04/2021",
+      "Location": "Torino",
+      "Price": 50,
+      "SubCategory": "Cows",
+      "Title": "Mucca",
+      "SellerUid": "Usr1"
+    },
+    "It2": {
+      "Category": "Catolibreria",
+      "Description": "Bic",
+      "ExpiryDate": "15/05/2022",
+      "Location": "Torino",
+      "Price": 1,
+      "SubCategory": "Pencils",
+      "Title": "Penna",
+      "SellerUid": "Usr1"
+
+    },
+    "It3": {
+      "Category": "Strumenti",
+      "Description": "Armonica",
+      "ExpiryDate": "15/04/2021",
+      "Location": "Milano",
+      "Price": 500,
+      "SubCategory": "Musicali",
+      "Title": "Pianola",
+      "SellerUid": "Usr2"
+    }
+  },
+  "Users": {
+    "private": {
+      "Usr1": {
+        "Items": {
+          "It1": {
+            "Category": "Animals",
+            "Description": "Quella della Milka",
+            "ExpiryDate": "15/04/2021",
+            "Location": "Torino",
+            "Price": 50,
+            "SubCategory": "Cows",
+            "Title": "Mucca"
+          },
+          "It2": {
+            "Category": "Catolibreria",
+            "Description": "Bic",
+            "ExpiryDate": "15/05/2022",
+            "Location": "Torino",
+            "Price": 1,
+            "SubCategory": "Pencils",
+            "Title": "Penna"
+          }
+        },
+        "usrInfo": {
+          "Email": "gianni.morandi@gmail.com",
+          "Name": "Gianni",
+          "Nickname": "gianni_mora",
+          "Location": "Torino",
+          "Phone": 3357887741
+        }
+      },
+      "Usr2": {
+        "Items": {
+          "It3": {
+            "Category": "Strumenti",
+            "Description": "Armonica",
+            "ExpiryDate": "15/04/2021",
+            "Location": "Milano",
+            "Price": 500,
+            "SubCategory": "Musicali",
+            "Title": "Pianola"
+          }
+        },
+        "usrInfo": {
+          "Email": "giuseppe.verdi@gmail.com",
+          "Name": "Giuseppe",
+          "Nickname": "giusyverd",
+          "Location": "Torino",
+          "Phone": 3357887741
+        }
+      }
+    },
+    "public": {
+      "Usr1": {
+        "Email": "gianni.morandi@gmail.com",
+        "Name": "Gianni",
+        "Nickname": "gianni_mora"
+      },
+      "Usr2": {
+        "Email": "giuseppe.verdi@gmail.com",
+        "Name": "Giuseppe",
+        "Nickname": "giusyverd"
+      }
+    }
+  }
+}

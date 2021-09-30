@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/OwnProfileFragment"
+        android:name="it.polito.mad.group33.ibey.ui.profile.showProfile.OwnProfileFragment"
+        android:label="@string/title_fragment_show_profile"
+        tools:layout="@layout/show_profile_fragment" >
+        <action
+            android:id="@+id/action_showProfileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+        <action
+            android:id="@+id/action_OwnProfileFragment_to_showReviews"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/showReviews" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="it.polito.mad.group33.ibey.ui.profile.editProfile.EditProfileFragment"
+        android:label="@string/title_fragment_edit_profile"
+        tools:layout="@layout/edit_profile_fragment" />
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="it.polito.mad.group33.ibey.ui.item.itemList.ItemListFragment"
+        android:label="@string/title_fragment_list_item"
+        tools:layout="@layout/item_list_fragment">
+        <action
+            android:id="@+id/action_itemListFragment_to_itemDetailsFragment"
+            app:destination="@id/OwnItemDetails"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+        <action
+            android:id="@+id/action_itemListFragment_to_itemEditFragment"
+            app:destination="@id/itemEditFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/OwnItemDetails"
+        android:name="it.polito.mad.group33.ibey.ui.item.itemDetail.OwnItemDetailsFragment"
+        android:label="@string/title_fragment_show_item"
+        tools:layout="@layout/item_details_fragment" >
+        <action
+            android:id="@+id/action_itemDetailsFragment_to_itemEditFragment"
+            app:destination="@id/itemEditFragment"
+            app:popUpTo="@id/OwnItemDetails"
+            app:popUpToInclusive="false"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+        <action
+            android:id="@+id/action_OwnItemDetails_to_otherProfileFragment"
+            app:destination="@id/otherProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemEditFragment"
+        android:name="it.polito.mad.group33.ibey.ui.item.itemEdit.ItemEditFragment"
+        android:label="@string/title_fragment_edit_item"
+        tools:layout="@layout/item_edit_fragment" >
+        <action
+            android:id="@+id/action_itemEditFragment_to_OwnItemDetailsFragment"
+            app:destination="@id/OwnItemDetails"
+            app:popUpTo="@id/itemListFragment"
+            app:popUpToInclusive="false"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/onSaleListFragment"
+        android:name="it.polito.mad.group33.ibey.ui.item.itemOnSaleList.OnSaleListFragment"
+        android:label="@string/title_fragment_on_sale_list_item"
+        tools:layout="@layout/item_list_fragment">
+        <action
+            android:id="@+id/action_onSaleListFragment_to_otherItemDetailsFragment"
+            app:destination="@id/otherItemDetailsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="it.polito.mad.group33.ibey.LoginFragment"
+        android:label="@string/title_fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_onSaleListFragment"
+            app:destination="@id/onSaleListFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@+id/mobile_navigation"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_loginFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right">
+            <argument
+                android:name="firstLogin"
+                app:argType="boolean"
+                android:defaultValue="true"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/otherItemDetailsFragment"
+        android:name="it.polito.mad.group33.ibey.ui.item.itemDetail.OtherItemDetailsFragment"
+        android:label="@string/title_fragment_other_item_details"
+        tools:layout="@layout/item_details_public_fragment">
+        <action
+            android:id="@+id/action_otherItemDetailsFragment_to_otherProfileFragment"
+            app:destination="@id/otherProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/otherProfileFragment"
+        android:name="it.polito.mad.group33.ibey.ui.profile.showProfile.OtherProfileFragment"
+        android:label="@string/title_fragment_other_profile"
+        tools:layout="@layout/show_profile_public_fragment">
+        <action
+            android:id="@+id/action_otherProfileFragment_to_showReviews"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/showReviews" />
+    </fragment>
+    <fragment
+        android:id="@+id/boughtItemsListFragment"
+        android:name="it.polito.mad.group33.ibey.ui.item.boughtItemsListFragment.BoughtItemsListFragment"
+        android:label="@string/title_fragment_bought_item" >
+        <action
+            android:id="@+id/action_boughtItemsListFragment_to_otherBoughtDetailsFragment"
+            app:destination="@id/otherBoughtDetailsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemsOfInterestListFragment"
+        android:name="it.polito.mad.group33.ibey.ui.item.itemsOfInterestListFragment.ItemsOfInterestListFragment"
+        android:label="@string/title_fragment_request_item" >
+        <action
+            android:id="@+id/action_itemsOfInterestListFragment_to_otherItemDetailsFragment"
+            app:destination="@id/otherItemDetailsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherBoughtDetailsFragment"
+        android:name="it.polito.mad.group33.ibey.ui.item.itemDetail.OtherBoughtDetailsFragment"
+        android:label="@string/title_fragment_other_item_details" >
+        <action
+            android:id="@+id/action_otherBoughtDetailsFragment_to_otherProfileFragment"
+            app:destination="@id/otherProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/showReviews"
+        android:name="it.polito.mad.group33.ibey.ui.profile.showReviews.ShowReviews"
+        android:label="@string/title_fragment_show_review"
+        tools:layout="@layout/show_reviews_fragment" >
+        <action
+            android:id="@+id/action_showReviews_to_OwnProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/OwnProfileFragment" />
+        <action
+            android:id="@+id/action_showReviews_to_otherProfileFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/otherProfileFragment" />
+    </fragment>
+</navigation>

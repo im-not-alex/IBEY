@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_show_seller"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:elevation="20dp"
+    android:background="@color/primaryColor">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/item_show_seller_button"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/secondaryLightColor"
+        android:backgroundTintMode="src_in"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="fill"
+        android:textAllCaps="false"
+        android:text=""
+        android:textColor="#000000"
+        app:backgroundTint="@color/secondaryLightColor"
+        app:icon="@drawable/ic_keyboard_arrow_right"
+        app:iconPadding="0dp"
+        app:iconTint="#000000" />
+
+</LinearLayout>

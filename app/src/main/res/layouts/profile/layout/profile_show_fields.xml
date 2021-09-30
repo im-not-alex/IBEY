@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/assignMargin"
+    android:background="@drawable/fields_shape"
+     >
+
+    <include
+        layout="@layout/profile_show_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_fullName"
+        style="@style/ShowTextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/showMarginBottom"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="@color/primaryDarkColor"
+        android:hint="@string/full_name">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_fullName"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_fullName"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View style="@style/Divider"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_nickname"
+        style="@style/ShowTextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/showMarginBottom"
+        app:startIconDrawable="@drawable/ic_nick"
+        app:startIconTint="@color/primaryDarkColor"
+        android:hint="@string/nickname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_nickname"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            android:text="@string/input_nickname" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View style="@style/Divider"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_email"
+        style="@style/ShowTextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/showMarginBottom"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/primaryDarkColor"
+        android:hint="@string/email">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_email"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_email"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View style="@style/Divider"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_phoneNumber"
+        style="@style/ShowTextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/showMarginBottom"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/primaryDarkColor"
+        android:hint="@string/phone_number">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_phoneNumber"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_phoneNumber"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View style="@style/Divider"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idProfileLocation"
+        style="@style/ShowTextInputStyle"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/showMarginBottom"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="@color/primaryDarkColor"
+        app:endIconMode="custom"
+        app:endIconTint="@color/primaryDarkColor"
+        app:endIconDrawable="@drawable/ic_keyboard_arrow_down"
+        android:hint="@string/location"
+        app:helperText="@string/showInMap"
+        app:helperTextTextColor="@color/primaryDarkColorObfuscated">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textProfileLocation"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_location"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.libraries.maps.MapView
+        android:id="@+id/idShowProfileLocationMap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/locationMapViewHeight"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/locationMapViewLayoutMargin"/>
+</LinearLayout>
+
