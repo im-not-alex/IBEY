@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/assignMargin"
+    android:background="@drawable/fields_shape">
+
+    <include
+        layout="@layout/item_rate_seller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <include
+        android:id="@+id/show_buyer_review"
+        layout="@layout/see_buyer_vote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/id_show_fields"
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_item_title"
+        style="@style/ShowTextInputStyle"
+        app:startIconDrawable="@drawable/ic_title_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_title">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_item_title"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_item_title"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_item_description"
+        style="@style/ShowTextInputStyle"
+        app:startIconDrawable="@drawable/ic_description_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_description"
+        app:counterMaxLength="@integer/maxLengthDescription"
+        app:boxStrokeWidthFocused="0dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_item_description"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:fadeScrollbars="false"
+            android:gravity="start"
+            android:inputType="none"
+            android:maxLength="@integer/maxLengthDescription"
+            android:maxLines="7"
+            android:minLines="2"
+            android:scrollbars="vertical"
+            android:text="@string/input_item_description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_item_price"
+        style="@style/ShowTextInputStyle"
+        app:startIconDrawable="@drawable/ic_price_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_price">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_item_price"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/input_item_price"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idItemLocation"
+        style="@style/ShowTextInputStyle"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/showMarginBottom"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="@color/primaryDarkColor"
+        app:endIconMode="custom"
+        app:endIconTint="@color/primaryDarkColor"
+        app:endIconDrawable="@drawable/ic_keyboard_arrow_down"
+        android:hint="@string/location"
+        app:helperText="@string/showInMap"
+        app:helperTextTextColor="@color/primaryDarkColorObfuscated">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textItemLocation"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_location"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.libraries.maps.MapView
+        android:id="@+id/idShowItemLocationMap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/locationMapViewHeight"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/locationMapViewLayoutMargin"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_item_category"
+        style="@style/ShowTextInputStyle"
+        app:startIconDrawable="@drawable/ic_category_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_category">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_item_category"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_item_category"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_item_date"
+        style="@style/ShowTextInputStyle"
+        app:startIconDrawable="@drawable/ic_date_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_date">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_item_date"
+            style="@style/DisableTextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_item_date"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/statusHiddenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_item_status"
+            style="@style/ShowTextInputStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_hidden_status"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_item_status"
+                style="@style/DisableTextInputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/showHiddenSwitch"
+            android:enabled="false"
+            android:theme="@style/SwitchCompatTheme"
+            app:switchMinWidth="@dimen/hiddenSwitchMinWidth"
+            android:layout_width="@dimen/hiddenSwitchLayoutWidth"
+            android:layout_height="@dimen/hiddenSwitchLayoutHeight"
+            android:paddingBottom="@dimen/hiddenSwitchLayoutPaddingBottom"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/show_review"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:paddingBottom="2dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/dialog_rate_title"
+        android:textAlignment="center"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/assignMargin"
+        android:layout_marginTop="@dimen/assignMarginHalf"
+        android:layout_marginEnd="@dimen/assignMargin"
+        android:layout_marginBottom="@dimen/assignMarginHalf"
+        android:numStars="5"
+        android:progressTint="@color/secondaryColor"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:stepSize="1"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+         />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="18sp"
+        android:scrollbars = "vertical"
+        android:minLines="1"
+        android:textStyle="italic"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/primaryColor"/>
+
+</LinearLayout>

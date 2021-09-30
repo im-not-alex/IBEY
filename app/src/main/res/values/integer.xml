@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="maxLengthInputEditText">64</integer>
+    <integer name="maxLengthInputEditTextEmail">254</integer>
+    <integer name="maxLengthInputPhoneNumber">20</integer>
+    <integer name="maxLengthDescription">500</integer>
+    <integer name="maxLengthComments">200</integer>
+    <integer name="maxLengthPrice">20</integer>
+</resources>

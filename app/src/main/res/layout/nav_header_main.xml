@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/profile_pic_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/nav_header_desc"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fullname_drawer"
+        android:src="@drawable/bottom_picture_shape"
+        android:contentDescription="@string/shadow_desc" />
+
+    <TextView
+        android:id="@+id/fullname_drawer"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:paddingHorizontal="@dimen/assignMarginHalf"
+        android:paddingTop="16dp"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/email_drawer"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/email_drawer"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:paddingHorizontal="@dimen/assignMarginHalf"
+        android:paddingBottom="@dimen/assignMarginHalf"
+        android:text="@string/nav_header_subtitle"
+        android:textColor="@color/backgroundProfile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

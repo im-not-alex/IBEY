@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/assignMargin"
+    android:paddingBottom="@dimen/assignMargin"
+    android:background="@drawable/fields_shape">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_fullName"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/full_name"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="@color/primaryDarkColor"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_fullName"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_fullName"
+            android:autofillHints=""
+            android:inputType="textPersonName|textCapWords"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_nickname"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nickname"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_nick"
+        app:startIconTint="@color/primaryDarkColor"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_nickname"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_nickname"
+            android:autofillHints=""
+            android:inputType="textPersonName"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_email"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/primaryDarkColor"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_email"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_email"
+            android:autofillHints=""
+            android:inputType="textEmailAddress"
+            android:maxLength="@integer/maxLengthInputEditTextEmail"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_phoneNumber"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/primaryDarkColor"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_phoneNumber"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_phoneNumber"
+            android:autofillHints=""
+            android:inputType="phone"
+            android:maxLength="@integer/maxLengthInputPhoneNumber"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_location"
+        style="@style/TextInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/location"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="@color/primaryDarkColor"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_location"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_location"
+            android:autofillHints=""
+            android:inputType="textCapWords"
+            android:maxLength="@integer/maxLengthInputEditText"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:cursorVisible="false"
+            android:clickable="false"
+            android:focusable="false"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.libraries.maps.MapView
+        android:id="@+id/idEditProfileLocationMap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/locationMapViewHeight"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/locationMapViewLayoutMargin" />
+
+</LinearLayout>

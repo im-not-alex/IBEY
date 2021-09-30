@@ -1,0 +1,72 @@
+{
+  "project_info": {
+    "project_number": "485419141146",
+    "firebase_url": "https://ibey-group33.firebaseio.com",
+    "project_id": "ibey-group33",
+    "storage_bucket": "ibey-group33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485419141146:android:87d5e2f0b088f7055fe9a3",
+        "android_client_info": {
+          "package_name": "it.polito.mad.group33.ibey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485419141146-b8digsbhuu906okilpk2au007kjff6tu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.polito.mad.group33.ibey",
+            "certificate_hash": "435a6105db039287a1f4977e82f64a5591f301ca"
+          }
+        },
+        {
+          "client_id": "485419141146-8lgaidkva17lc5c1g74ts84kr9q6c31l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.polito.mad.group33.ibey",
+            "certificate_hash": "b08c9db7ea46a71d621cfbcacd154f751a4a3abf"
+          }
+        },
+        {
+          "client_id": "485419141146-roif2jno8qnr65uh6lqs3qg54fklsvtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.polito.mad.group33.ibey",
+            "certificate_hash": "dc358044d68ba69d4cc880a175db63a6acd42133"
+          }
+        },
+        {
+          "client_id": "485419141146-43mke7m38ukg6pgb7ejhcquoj41kp10h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.polito.mad.group33.ibey",
+            "certificate_hash": "1ce70363805cb23a5b0d4c92fde183c4b1e44fef"
+          }
+        },
+        {
+          "client_id": "485419141146-p30s9gednpasbq7llatlh1q0bopj4vju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGS4v30ZCvGG9qe7ECWHP-uR_AtOeN4Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485419141146-p30s9gednpasbq7llatlh1q0bopj4vju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,2 @@
+rootProject.name='ibey'
+include ':app'

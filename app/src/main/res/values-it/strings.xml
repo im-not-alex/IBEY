@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Main activity strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="toastLogout">Log out completato! Accedi con un altro account</string>
+    <string name="toastLoginOk">Connesso come</string>
+    <string name="toastLoginErr">Connessione a Google fallita</string>
+    <string name="toastMandatoryLogin">Accesso a Google necessario!</string>
+    <string name="openingWelcome">Accesso in corso…</string>
+    <string name="doubleBackClick">Per favore, clicca nuovamente indietro per chiudere l\'app</string>
+
+    <!-- App and Titles strings -->
+
+    <string name="app_name">Ibey</string>
+    <string name="title_fragment_show_profile">Il tuo profilo</string>
+    <string name="title_fragment_edit_profile">Modifica profilo</string>
+    <string name="title_fragment_list_item">I tuoi annunci</string>
+    <string name="title_fragment_on_sale_list_item">Annunci</string>
+    <string name="title_fragment_show_item">Dettaglio annuncio</string>
+    <string name="title_fragment_edit_item">Modifica</string>
+    <string name="title_fragment_login">Login</string>
+    <string name="title_fragment_other_item_details">Dettaglio annuncio</string>
+    <string name="title_fragment_other_profile">Profilo</string>
+    <string name="title_fragment_bought_item">Acquisti</string>
+    <string name="title_fragment_request_item">Richieste di acquisto</string>
+    <string name="title_fragment_show_review">Recensioni</string>
+    <string name="title_logout">Disconnetti</string>
+
+    <!-- Profile strings -->
+    <string name="temp_profile">temp_profile</string>
+    <string name="edit">Modifica</string>
+    <string name="cancel">Annulla</string>
+    <string name="confirm">Salva</string>
+    <string name="filter">Filtra</string>
+    <string name="clear">Resetta</string>
+    <string name="full_name">Nome e Cognome</string>
+    <string name="input_fullName"></string>
+    <string name="nickname">Pseudonimo</string>
+    <string name="input_nickname"></string>
+    <string name="email">Email</string>
+    <string name="input_email"></string>
+    <string name="location">Località</string>
+    <string name="input_location"></string>
+    <string name="profile_picture">Foto profilo</string>
+    <string name="header_context_menu_title">Seleziona</string>
+    <string name="open_camera">Apri la fotocamera</string>
+    <string name="open_gallery">Apri la galleria</string>
+    <string name="input_phoneNumber"></string>
+    <string name="phone_number">Telefono</string>
+    <string name="info">Info</string>
+    <string name="infoMessage">Lo sapevi che dopo aver impostato la tua immagine profilo, puoi ruotarla premendoci sopra?</string>
+    <string name="toastinput">Carattere Immesso Invalido</string>
+    <string name="toastInvalidEmail">Formato Email Inserita Invalida</string>
+    <string name="toastErrorCheck">Errore in alcuni campi!</string>
+    <string name="toastProfileSaved">Profilo aggiornato!</string>
+    <string name="toastItemSaved">Annuncio aggiornato!</string>
+    <string name="toastItemAdded">Annuncio inserito! Questa è un\'anteprima, presto lo vedrai nella tua lista!</string>
+    <string name="toastUpdating">Inserimento in corso…</string>
+    <string name="toastCancelledOp">Operazione annullata!</string>
+    <string name="searchTitle">Cerca</string>
+    <string name="filterTitle">Filtra</string>
+    <string name="soldBy">di</string>
+    <string name="interestedUsers"> utenti interessati!</string>
+    <string name="sellToOtherString"> Vendi a un altro utente</string>
+    <string name="sellUsers"> Seleziona l\'acquirente</string>
+    <string name="sellText"> Vendi </string>
+    <string name="editText"> Modifica </string>
+    <string name="soldUser"> Venduto a:  %1$s</string>
+    <string name="showInMap">Clicca per mostrare nella mappa</string>
+    <string name="hideMap">Clicca per nascondere la mappa</string>
+    <string name="press_to_call">Premi per chiamare!</string>
+
+
+    <!-- Item strings -->
+    <string name="item_title">Titolo</string>
+    <string name="input_item_title"></string>
+    <string name="item_description">Descrizione</string>
+    <string name="input_item_description"></string>
+    <string name="item_price">Prezzo</string>
+    <string name="item_range_price">Limiti del prezzo</string>
+    <string name="input_item_price"></string>
+    <string name="euro_suffix">€</string>
+    <string name="item_category">Categoria - Sotto Categoria</string>
+    <string name="input_item_category"></string>
+    <string name="item_location">Luogo</string>
+    <string name="input_item_location"></string>
+    <string name="item_date">Data di scadenza</string>
+    <string name="input_item_date"></string>
+    <string name="item_hidden_status">Nascosto</string>
+    <string name="input_item_status"></string>
+    <string name="emptyInterest">Al momento non sei interessato ad alcun oggetto</string>
+    <string name="emptyList">Aggiungi un oggetto da mettere in vendita!</string>
+    <string name="emptybought">Non hai ancora fatto acquisti</string>
+    <string name="emptyCommonList">Non ci sono oggetti in vendita!</string>
+    <string name="itemImage">Immagine</string>
+    <string name="itemTitle">Titolo</string>
+    <string name="itemCategory">Categoria</string>
+    <string name="itemLocation">Luogo</string>
+    <string name="itemExpireDate">Data di scadenza</string>
+    <string name="itemPrice">Prezzo</string>
+    <string name="itemSellerNickname">Nickname del venditore</string>
+    <string name="empty_field_error">Campo Vuoto!</string>
+    <string name="wrong_price_error">"Il prezzo massimo è di 999999,99, con 2 cifre decimali"</string>
+    <string name="external_buyer">Venditore esterno</string>
+
+    <!-- Item strings -->
+    <string name="dialog_rate_title">È ora di votare il venditore!</string>
+    <string name="add_comment">Commenti? Scrivili qua…</string>
+    <string name="send_comment">Invia</string>
+    <string name="please_rate">Dai almeno una stella!</string>
+
+
+
+    <!-- contentDescription strings -->
+    <string name="shadow_desc">leggera ombra sull\'immagine</string>
+    <string name="profile_icon_desc">piccola icona dell\'utente</string>
+    <string name="item_sold_descr">cartello indicante oggetto venduto</string>
+    <string name="logo_descr">logo dell\'applicazione</string>
+    <string name="author_pic_desc">piccola icona dell\'autore della recensione</string>
+    <string name="edit_or_sold_descr">bottone di modifica con il simbolo di una matita</string>
+
+    <string-array name="rate">
+        <item>Pessimo</item>
+        <item>Scadente</item>
+        <item>Nella media</item>
+        <item>Ottimo</item>
+        <item>Eccellente</item>
+    </string-array>
+
+    <string-array name="itemStatus">
+        <item>In vendita</item>
+        <item>Venduto</item>
+        <item>Nascosto</item>
+    </string-array>
+
+    <string-array name="category">
+        <item>Arte e Artigianato</item>
+        <item>Sports &amp; Hobby</item>
+        <item>Bambino</item>
+        <item>Per Lei</item>
+        <item>Per Lui</item>
+        <item>Elettronica</item>
+        <item>Giochi</item>
+        <item>Motori</item>
+    </string-array>
+    <string-array name="category_0">
+        <item>Pittura, Disegno &amp; Materiale per Arte</item>
+        <item>Cucito</item>
+        <item>Bricolage</item>
+        <item>Decorazioni &amp; Provviste Feste</item>
+    </string-array>
+    <string-array name="category_1">
+        <item>Sport e Tempo Libero</item>
+        <item>Divertimento all\' Aperto</item>
+        <item>Sports &amp; Fitness</item>
+        <item>Provviste Animali</item>
+    </string-array>
+    <string-array name="category_2">
+        <item>Abbigliamento &amp; Accessori</item>
+        <item>Giocattoli</item>
+        <item>Seggiolini &amp; Accessori</item>
+        <item>Gravidanza &amp; Maternità</item>
+        <item>Passeggini &amp; Accessori</item>
+    </string-array>
+    <string-array name="category_3">
+        <item>Abbigliamento</item>
+        <item>Scarpe</item>
+        <item>Orologi</item>
+        <item>Borsette</item>
+        <item>Accessori</item>
+    </string-array>
+    <string-array name="category_4">
+        <item>Abbigliamento</item>
+        <item>Scarpe</item>
+        <item>Orologi</item>
+        <item>Accessori</item>
+    </string-array>
+    <string-array name="category_5">
+        <item>Computers</item>
+        <item>Monitor</item>
+        <item>Stampanti &amp; Scanner</item>
+        <item>Fotografia</item>
+        <item>Smartphone &amp; Tablet</item>
+        <item>Audio</item>
+        <item>Televisioni &amp; Video</item>
+        <item>Consoles</item>
+        <item>Wearable</item>
+        <item>Accessori &amp; Provviste</item>
+        <item>Ferri da Stiro</item>
+        <item>Aspiratori &amp; Cura Pavimenti</item>
+    </string-array>
+    <string-array name="category_6">
+        <item>Action Figures &amp; Modellini</item>
+        <item>Arte e Artigianato</item>
+        <item>Costruzioni</item>
+        <item>Bambole &amp; Accessori</item>
+        <item>Elettronica per Bambini</item>
+        <item>Apprendimento &amp; Istruzione</item>
+        <item>Tricicli, Scooter &amp; Carri</item>
+        <item>Videogiochi</item>
+    </string-array>
+    <string-array name="category_7">
+        <item>Elettronica Auto &amp; Accessori</item>
+        <item>Accessori</item>
+        <item>Moto &amp; Corse</item>
+        <item>Ricambi</item>
+        <item>Parti &amp; Accessories Camper</item>
+        <item>Strumenti &amp; Attrezzatura</item>
+    </string-array>
+
+    <string name="number_review_single">%2$.1f \u2b50 (%1$d recensione)</string>
+    <string name="see_rate_title">La recensione dell\'acquirente!</string>
+    <string name="todo_see_rate_title">L\'acquirente non ha ancora recensito</string>
+    <string name="number_review">%2$.1f \u2b50 (%1$d recensioni)</string>
+    <string name="interest_single">%1$d Utente Interessato!</string>
+    <string name="interest">%1$d Utenti Interessati!</string>
+
+    <string name="noReviewString">Non ci sono ancora recensioni!</string>
+    <string name="anonymous">Anonimo</string>
+</resources>

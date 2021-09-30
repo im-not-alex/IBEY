@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#03dac5</color>
+    <color name="primaryLightColor">#66fff8</color>
+    <color name="primaryDarkColor">#00a895</color>
+    <color name="primaryDarkColorObfuscated">#ED5E8782</color>
+    <color name="secondaryColor">#efb800</color>
+    <color name="secondaryLightColor">#ffea4c</color>
+    <color name="secondaryDarkColor">#b88900</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="backgroundProfile">#F8F8FF</color>
+    <color name="backgroundProfilePic">#F8F8FF</color>
+    <color name="backgroundContentStronger">#FCF4F4</color>
+    <color name="textContextMenu">#151515</color>
+    <color name="colorCMBackground">#F4F4F4</color>
+    <color name="tick_without_mod">#EEFFFFFF</color>
+    <color name="tick_with_mod">#0CF656</color>
+    <color name="colorAccent">#6200EE</color>
+    <color name="cross_color">#F70D1A</color>
+    <color name="exit_color">#FF0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="itemListBackground">#F8F8FF</color>
+    <color name="gradientGray">#70000000</color>
+    <color name="lightGradientGray">#31000000</color>
+    <color name="loadingPopupTransparency">#85000000</color>
+    <color name="backgroundReviewCard">#424242</color>
+    <color name="lightGray">#ededed</color>
+    <color name="red_sold">#FF4D2C</color>
+    <color name="red_sold_light">#FFE74C</color>
+
+
+    <color name="filter_icon_color">#89AFC2</color>
+    <color name="filter_icon_active_color">@android:color/white</color>
+    <color name="tab_bg_color">#084A6E</color>
+    <color name="bottom_bar_color">#03dac5</color>
+</resources>
